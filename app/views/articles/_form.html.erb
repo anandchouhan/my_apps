@@ -1,0 +1,26 @@
+<%= form_for :article, url: '/users/:user_id/articles', method: :post do |f| %>
+
+  <p>
+    <%= f.label :subject %><br>
+    <%= f.text_area :title, :cols => 40, :rows => 5 %>
+  </p> 
+  
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :detail, :cols => 40, :rows => 5 %>
+  </p> 
+  
+  <p>
+    <%= f.submit 'submit'  %>
+  </p>
+  <% @articles.each do |article| %>
+  	<%= article.title %>   
+    <%= article.detail %> 
+  <% end %>
+	
+<% end %>
+
+
+
+
+

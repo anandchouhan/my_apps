@@ -1,0 +1,8 @@
+<%= form_for @contact, url: user_contacts_path(@user.id), metohd: :post do |f| %>
+  <%= f.label :sender %>
+  <%= f.text_field :from, :value => current_user.email, :readonly => true %><br>
+  <%= f.label :reciver %>
+  <%= f.email_field :to %><br><br>
+  <%= f.text_area :box, placeholder: "Message"%>
+  <%= f.submit %>
+<% end %>
